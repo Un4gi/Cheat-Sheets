@@ -1,2 +1,2 @@
 # Cheat-Sheets
-Just some cheat sheets for various penetration testing/red teaming/bounty hunting activities
+Just some cheat sheets for various bounty hunting/penetration testing/red teaming activities
