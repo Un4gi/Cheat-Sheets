@@ -26,9 +26,16 @@ As the name implies, these are values that are declared in the program. Variable
 - Example: `int bugs = 2;`
 - camelCase is prefered naming convention for variables
 - PascalCase is the preferred naming convention for constants
-- For changing variables to specific type, type identifier needs added at the end: `float totalPrice = 19.99f;`
+- For declaring variables as specific type, type identifier needs added at the end: `float totalPrice = 19.99f;`
 - Common types: `byte`, `int`, `long`, `float`, `double`, `char`, `string`, `bool`
 - To have the compiler auto-detect data type, use `var` as the type
+
+### Type Conversion
+Can type cast variables to state data-loss is ok
+- `byte = b; int = (int)b;`
+For non-compatible types, you can convert using `Convert` class.
+- `string s = "1"; int i = Convert.ToInt32(s);`
+- common methods: `ToByte()`, `ToInt16()`, `ToInt32()`, `ToInt64()`
 
 ## Overflowing
 Exceeding boundary of data type overflows by default. Use `checked{}` to prevent overflowing (or use larger data type).
