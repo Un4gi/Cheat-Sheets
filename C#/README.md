@@ -16,7 +16,7 @@ A class is a container for related functions
 
 ### Method/Function
 1. Main method is the entry point to the application. Default format is as follows:
-- static <output> Method(<type> <parameters)
+- static <output> Method(<type> <parameters>)
 - "void" simply means nothing is output
 
 ### Variables/Constants
