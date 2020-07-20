@@ -33,6 +33,7 @@ As the name implies, these are values that are declared in the program. Variable
 ### Type Conversion
 Can type cast variables to state data-loss is ok
 - `byte = b; int = (int)b;`
+
 For non-compatible types, you can convert using `Convert` class.
 - `string s = "1"; int i = Convert.ToInt32(s);`
 - common methods: `ToByte()`, `ToInt16()`, `ToInt32()`, `ToInt64()`
