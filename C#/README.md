@@ -31,7 +31,7 @@ As the name implies, these are values that are declared in the program. Variable
 - To have the compiler auto-detect data type, use `var` as the type
 
 ### Type Conversion
-Can type cast variables to state data-loss is ok
+Can type cast variables to state risk of data-loss is known
 - `int = i; byte = (byte)i;`
 
 For non-compatible types, you can convert using `Convert` class.
