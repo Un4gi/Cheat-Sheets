@@ -10,3 +10,6 @@ ssh -D localhost:9999 <ip> -p 25
 
 ## 
 - Parse `access.log` file for unique IP addresses: `cat access.log | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort -u `
+
+## Scanning through Proxychains
+- nmap -sT -Pn <ip>
