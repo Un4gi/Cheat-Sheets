@@ -11,5 +11,11 @@ ssh -D localhost:9999 <ip> -p 25
 ## 
 - Parse `access.log` file for unique IP addresses: `cat access.log | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort -u `
 
+## Starting a SOCKS server via Metasploit
+- Add a route to go through a current session
+- `use auxiliary/server/socks4a`
+- `set srvport <port>`
+- `run -j`
+
 ## Scanning through Proxychains
-- `nmap -sT -Pn <ip>`
+- `proxychains nmap -sT -Pn <ip>`
