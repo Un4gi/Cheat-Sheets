@@ -7,6 +7,7 @@
 ssh -L 9999:localhost:9999 user@<ip>
 ssh -D localhost:9999 <ip> -p 25
 ```
+- Proxy traffic through Metasploit: `ssh -L 8000:<remoteIP>:1337 root@<remoteIP>`, then start socks via Metasploit on port `1337`.
 
 ## 
 - Parse `access.log` file for unique IP addresses: `cat access.log | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort -u `
