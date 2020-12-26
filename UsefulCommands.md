@@ -34,6 +34,8 @@ ssh -D localhost:9999 <ip> -p 25
 - `checksec` - checks memory protections enabled on binary
 - `b main` - sets a breakpoint at main
 - `r <arguments>` - runs the binary with the arguments specified
+- `p system` - gets memory address of system
+- `p exit` - gets exit address
 
 ### Easy check for ASLR
 - `ldd <binary> | grep libc` - Run multiple times to see if memory address changes
