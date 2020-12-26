@@ -42,3 +42,6 @@ ssh -D localhost:9999 <ip> -p 25
 
 ### Disable ASLR
 - As root: `echo 0 > /proc/sys/kernel/randomize_va_space`
+
+### Enable ASLR
+- As root: `echo 2 > /proc/sys/kernel/randomize_va_space`
