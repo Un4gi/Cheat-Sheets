@@ -20,3 +20,6 @@ ssh -D localhost:9999 <ip> -p 25
 
 ## Scanning through Proxychains
 - `proxychains nmap -sT -Pn <ip>`
+
+## Linux Enumeration
+- `find / -perm -4000 2>/dev/null` - Find files with SUID bit set
