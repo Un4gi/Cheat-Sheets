@@ -26,8 +26,14 @@ ssh -D localhost:9999 <ip> -p 25
 
 ## Buffer Overflow
 
+### Creating Unique Patterns
+- `msf-pattern_create -l <length>`
+- `msf-pattern_offset -q <location>`
+
 ### gdb-peda
 - `checksec` - checks memory protections enabled on binary
+- `b main` - sets a breakpoint at main
+- `r <arguments>` - runs the binary with the arguments specified
 
 ### Easy check for ASLR
 - `ldd <binary> | grep libc` - Run multiple times to see if memory address changes
