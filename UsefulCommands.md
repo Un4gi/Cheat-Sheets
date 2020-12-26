@@ -24,7 +24,7 @@ ssh -D localhost:9999 <ip> -p 25
 ## Linux Enumeration
 - `find / -perm -4000 2>/dev/null` - Find files with SUID bit set
 
-## Buffer Overflow
+## Linux Buffer Overflow
 
 ### Creating Unique Patterns
 - `msf-pattern_create -l <length>`
@@ -45,3 +45,12 @@ ssh -D localhost:9999 <ip> -p 25
 
 ### Enable ASLR
 - As root: `echo 2 > /proc/sys/kernel/randomize_va_space`
+
+### Identify system offset 
+- `readelf -s /lib/i386-linux-gnu/libc.so.6 | grep system`
+
+### Identify exit offset
+- `readelf -s /lib/i386-linux-gnu/libc.so.6 | grep exit`
+
+### Identify /bin/sh location
+- `strings -a -t x /lib/i386-linux-gnu/libc.so.6 | grep /bin/sh`
