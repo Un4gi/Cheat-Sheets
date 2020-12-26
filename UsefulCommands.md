@@ -24,5 +24,10 @@ ssh -D localhost:9999 <ip> -p 25
 ## Linux Enumeration
 - `find / -perm -4000 2>/dev/null` - Find files with SUID bit set
 
-## gdb-peda
+## Buffer Overflow
+
+### gdb-peda
 - `checksec` - checks memory protections enabled on binary
+
+### Easy check for ASLR
+- `ldd <binary> | grep libc` - Run multiple times to see if memory address changes
