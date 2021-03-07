@@ -14,7 +14,7 @@
 2. `->`     Waiting for the next line of a command
 3. `'>`     Waiting for the next line of a string started with a single quote
 4. `">`     Waiting for the next line of a string started with a double quote
-5. ```>```     Waiting for the next line of a string started with a backtick
+5. ``` `> ```     Waiting for the next line of a string started with a backtick
 6. `/*>`    Waiting for the next line of a comment started with /*
 
 ## Useful Commands
